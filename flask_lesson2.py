@@ -20,7 +20,7 @@ def calc(one, two):
 
 @app.route('/user/<name>/<int(signed=True):age>')
 def user(name, age):
-    if age < 0:
+    if age < 0: # проверка на положительный возраст
         raise ValueError('возраст должен быть положительным')
     return f'Hello, {name}. You are {age} years old.'
 
