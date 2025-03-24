@@ -1,4 +1,4 @@
-from app import app
+from lesson2.app import app
 
 
 @app.route('/hello')
