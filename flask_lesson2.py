@@ -15,6 +15,10 @@ def info():
 def calc(one, two):
     return f"The sum of {one} and {two} is {one+two}."
 
+@app.route('/reverse/<string:reverse_str>')
+def rev(reverse_str):
+    return reverse_str[::-1]
+
 # Запуск приложения
 if __name__ == "__main__":
     app.run(debug=True)
