@@ -1,6 +1,4 @@
-from flask import Flask
-
-app = Flask(__name__)
+from app import app
 
 
 @app.route('/hello')
@@ -28,8 +26,3 @@ def user(name, age):
 @app.route('/reverse/<reverse_str>')
 def rev(reverse_str):
     return reverse_str[::-1]
-
-
-# Запуск приложения
-if __name__ == "__main__":
-    app.run(debug=True)
