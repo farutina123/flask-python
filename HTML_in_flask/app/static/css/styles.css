@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e8e8e8;
+}
+
+.nav-and-foot {
+    background-color: #383636;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav{
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.nav-and-foot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-info{
+    text-align: center;
+}
+
+.logo-flask {
+    width: 200px;
+}
+
+.about-info p{
+    margin: 0;
+}
+
+.form-contact{
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 3px 3px 20px #a3a6a8;
+    border-radius: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-contact input,
+.form-contact textarea {
+    border: 2px solid #e8e8e8;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 30px;
+}
+
+.form-contact textarea {
+    min-height: 75px;
+    margin-bottom: 10px;
+}
+
+.form-contact button {
+    border: none;
+    background-color: #383636;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.good-message {
+    color: green;
+    margin-bottom: 20px;
+}
+
+footer{
+    flex-shrink: 0;
+    height: 80px;
+    color: #fff;
+}

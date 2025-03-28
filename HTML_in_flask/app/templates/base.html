@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <nav class="nav-and-foot">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <h1>{% block h1 %}{% endblock %}</h1>
+
+        {% block content %}
+        <!-- Контент будет вставляться здесь -->
+        {% endblock %}
+    </main>
+
+    <!-- Подвал -->
+
+    <footer class="nav-and-foot">
+        <p>&copy; 2025 My Flask App</p>
+    </footer>
+
+</body>
+</html>
