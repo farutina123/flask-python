@@ -1,9 +1,11 @@
 from flask import render_template, request, redirect, url_for
 from HTML_in_flask.app import app
+from datetime import datetime
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    current_date = datetime.now()
+    return render_template("index.html", current_date=current_date)
 
 @app.route("/about")
 def about():
