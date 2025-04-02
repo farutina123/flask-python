@@ -6,6 +6,7 @@ body{
     background-color: #e8e8e8;
 }
 
+
 .nav-and-foot {
     background-color: #383636;
     display: flex;
@@ -20,6 +21,11 @@ nav{
     margin-bottom: 20px;
 }
 
+main {
+    position: relative
+}
+
+
 .nav-and-foot a {
     color: #fff;
     text-decoration: none;
@@ -30,6 +36,24 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.manager-call {
+    position: fixed;
+    right: 10px;
+    bottom: 90px;
+    color: #fff;
+    background-color: #383636;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.date-now {
+    position: absolute;
+    right: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 
 .about-info{

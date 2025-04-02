@@ -11,6 +11,12 @@
                         <p>Vision: Empower people to build their ideas.</p>
                         <p>Values: Collaboration, innovation, and learning.</p>
                 </div>
+                <h2>Наша команда</h2>
+                <ul>
+                        {% for member in team_members %}
+                                <li>{{member.name}} - {{member.role}}</li>
+                        {% endfor %}
+                </ul>
         </div>
 {% endblock %}
 

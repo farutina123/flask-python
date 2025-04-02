@@ -14,7 +14,12 @@
     <label for="message">Your Message:</label>
     <textarea id="message" name="message" required></textarea>
     <button type="submit">Send</button>
-
-
 </form>
+
+<div class="manager-call">
+    <h3>Менеджер для связи</h3>
+    <p>менеджер: {{manager.name}}</p>
+    <p>телефон: {{manager.phone}}</p>
+    <p>адрес: {{manager.address.street}}, {{manager.address.city}}, {{manager.address.index}}</p>
+</div>
 {% endblock %}
