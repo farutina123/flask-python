@@ -49,7 +49,7 @@ def add_agent():
 
 
 @app.route('/rand')
-def add_rand():
+def add_rand(): #не дает написать имя файла, только через абсолютный путь, почему так?
     with open('C:/Users/Полина/PycharmProjects/flask-python/agents/app/adjectives.txt', 'r', encoding='utf8') as ONE:
         with open("C:/Users/Полина/PycharmProjects/flask-python/agents/app/nouns.txt", "r", encoding='utf8') as SECOND:
             arr1 = []
