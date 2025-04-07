@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Add Agent</title>
+</head>
+<body>
+    <div class="butt gen" onclick="location.href='/rand';">Name Random Generate</div>
+    <div class="container">
+        <h1>Add a New Agent</h1>
+            <div>
+                <form action="/add" method="POST">
+                    <div>
+                        <label for="name">Agent Name:</label>
+                        <input type="text" id="name" name="secret_name" value="{{rand}}" class="inp" required> <br><br>
+
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" class="inp" required><br><br>
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" class="inp" required><br><br>
+
+                        <label for="secret">Secret</label>
+                        <input type="radio" id="secret" name="level" value="secret">
+                        <label for="very">Very secret</label>
+                        <input type="radio" id="very" name="level" value="very secret"><br><br>
+
+                    </div>
+                    <button type="submit" class="butt">Add Agent</button>
+                </form>
+            </div>
+
+            <div>
+                <a href="{{ url_for('get_agents') }}" class="to-other-page">Back to Agent List</a>
+            </div>
+    </div>
+</body>
+</html>

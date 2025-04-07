@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>agent</title>
+</head>
+<body>
+<div class="container">
+    <h1>Agent {{agent.secret_name}}</h1>
+    <div class="agent-info">
+        <div>Phone: {{agent.phone}}</div>
+        <div>E-mail: {{agent.email}}</div>
+        <div>The level of secrecy: {{agent.level}}</div>
+    </div>
+
+    <div>
+        <a href="{{ url_for('get_agents') }}" class="to-other-page">Back to Agent List</a>
+    </div>
+</div>
+</body>
+</html>
