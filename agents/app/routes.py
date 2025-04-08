@@ -2,8 +2,12 @@ from flask import Flask, render_template, request, redirect, url_for
 from agents.app import app
 from flask_sqlalchemy import SQLAlchemy
 import random
+import os
+from dotenv import load_dotenv
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+load_dotenv()
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('PATH_DB')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -57,7 +61,6 @@ def add_rand(): #не дает написать имя файла, только 
     with open("C:/Users/Полина/PycharmProjects/flask-python/agents/app/nouns.txt", "r", encoding='utf8') as second:
         arr2 = []
         for i in second:
-            print(i)
             arr2.append(i)
     random_item_first = random.choice(arr1)
     random_item_second = random.choice(arr2)
