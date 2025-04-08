@@ -54,7 +54,7 @@ def add_rand(): #не дает написать имя файла, только 
         with open("C:/Users/Полина/PycharmProjects/flask-python/agents/app/nouns.txt", "r", encoding='utf8') as second:
             arr1 = []
             for line in one:
-                arr1.append(line)
+                arr1.append(line)len
             arr2 = []
             for i in second:
                 print(i)
